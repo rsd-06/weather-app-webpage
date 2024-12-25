@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+<div class="container">
+
+    <div class="navBar" id="navBar-div">
+        <nav class="navBar" id="navBar-nav">
+            <ul class="navBar" id="navBar-list">
+                <li class="navBar" id="navBar-search"><a href="#search"><h3>Search</h3></a></li>
+                <li class="navBar" id="navBar-details"><a href="#details"><h3>Details</h3></a></li>
+                <li class="navBar active" id="navBar-about" style="float: right"><a href=""><h3>About</h3></a></li>
+            </ul>
+        </nav>
+    </div>
+
+<!--    //WAS TRYING TO PULL A SEMI TRANSPARENT SCREEN ON HOVERING ON ABOUT WHICH SHOWED MY INFORMATION AND VERSION OF THE APP.-->
+<!--    <div class="about hover-overlay" id="about-div">-->
+<!--        <p><h1>Credits : Sudharshan R</h1></p>-->
+<!--        <p><h1>Project Name : Weather App</h1></p>-->
+<!--        <p><h1>Version : 22 December 2024</h1></p>-->
+<!--    </div>-->
+
+    <div class="container-brief" id="search">
+
+        <div class="weather-container" id="weather-container">
+            <div class="display" id="display-div">
+                <!--Definition and Usage of <span>
+                The <span> tag is an inline container used to mark up a part of a text, or a part of a document.
+
+                The <span> tag is easily styled by CSS or manipulated with JavaScript using the class or id attribute.
+
+                The <span> tag is much like the <div> element, but <div> is a block-level element and <span> is an inline element.
+
+                -->
+                <ul class="display" id="display-list">
+                    <li class="display" id="display-temperature_c"><p></p></li>
+                    <li class="display" id="display-temperature_f"><p></p></li>
+                    <li class="display" id="display-city"><p></p></li>
+                    <li class="display" id="display-date-time"><p></p></li>
+                    <li class="display" id="display-weather"><p></p></li>
+                    <li class="display" id="display-icon"><img src="" alt=""></img></li>
+                </ul>
+            </div><p></p>
+        </div>
+
+
+        <div class="input-container" id="input-container">
+            <div class="input" id="input-div">
+                <form class="input" id="input-form">
+                    <label for="input-location" id="input-weather-label" class="input"></label>
+                    <input type="text" name="input-city" class="input" id="input-location" placeholder="Enter City/ Lat-Lon in Decimals/ Zipcode"><br><br>
+                    <input type="submit" value="Search" class="input" id="input-searchButton">
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="container-detailed" id="details">
+
+        <div class="weather-container">
+
+
+            <div class="detailed-display" id="detailed-display-div">
+
+                <ul class="detailed-display" id="detailed-display-list" >
+                    <li class="detailed-display" id="detailed-display-feelslike_c"><p></p></li>
+                    <li class="detailed-display" id="detailed-display-feelslike_f"><p></p></li>
+                    <li class="detailed-display" id="detailed-display-latitude"><p></p></li>
+                    <li class="detailed-display" id="detailed-display-longitude"><p></p></li>
+                    <li class="detailed-display" id="detailed-display-wind_kph" ><p></p></li>
+                    <li class="detailed-display" id="detailed-display-wind_mph"><p></p></li>
+                    <li class="detailed-display" id="detailed-display-wind_degree"><p></p></li>
+                    <li class="detailed-display" id="detailed-display-wind_dir"><p></p></li>
+                    <li class="detailed-display" id="detailed-display-precip_mm"><p></p></li>
+                    <li class="detailed-display" id="detailed-display-humidity"><p></p></li>
+                    <li class="detailed-display" id="detailed-display-windchill_c"><p></p></li>
+                    <li class="detailed-display" id="detailed-display-windchill_f"><p></p></li>
+                    <li class="detailed-display" id="detailed-display-heatindex_c"><p></p></li>
+                    <li class="detailed-display" id="detailed-display-heatindex_f"><p></p></li>
+                    <li class="detailed-display" id="detailed-display-dewpoint_c"><p></p></li>
+                    <li class="detailed-display" id="detailed-display-dewpoint_f"><p></p></li>
+                    <li class="detailed-display" id="detailed-display-co"><p></p></li>
+                    <li class="detailed-display" id="detailed-display-no2"><p></p></li>
+                    <li class="detailed-display" id="detailed-display-so2"><p></p></li>
+                    <li class="detailed-display" id="detailed-display-pm2_5"><p></p></li>
+                    <li class="detailed-display" id="detailed-display-pm10"><p></p></li>
+
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+
+</div>
+
+
+
+<script src="script.js"></script>
+</body>
+</html>

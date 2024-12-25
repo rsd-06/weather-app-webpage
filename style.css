@@ -1,0 +1,241 @@
+/*LEARNINGS :
+
+1-dont use id for selecting an element, USE CLASS AND THEN SELECT AND ADD STYLES.
+selecting through id doesn't works properly. Reason ? Find out
+ */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-y: scroll;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+/*How To Hide Scrollbars
+Add overflow: hidden; to hide both the horizontal and vertical scrollbar.
+
+To only hide the vertical scrollbar, or only the horizontal scrollbar, use overflow-y or overflow-x:
+body {
+  overflow-y: hidden; //Hide vertical scrollbar
+    overflow-x: hidden; //Hide horizontal scrollbar
+
+Hide Scrollbars But Keep Functionality
+To hide the scrollbars, but still be able to keep scrolling, you can use the following code:
+
+/* Hide scrollbar for Chrome, Safari and Opera
+
+    .example::-webkit-scrollbar {
+        display: none;
+    }
+
+// Hide scrollbar for IE, Edge and Firefox
+
+
+    .example {
+        -ms-overflow-style: none;  // IE and Edge
+        scrollbar-width: none;  // Firefox
+    }
+ */
+
+
+.container-brief{
+    width: 100%;
+    height: 100vh;
+    /*background-image: linear-gradient(to right, #E40066,#DAE0F2);*/
+/*!*    GRADIENTS ARE ACCESSED BY background-image : *! https://www.w3schools.com/css/css3_gradients.asp*/
+/*    ADDING THIS LINEAR GRADIENT THROUGH JS IN JS FILE ITSELF BASED ON THE WEATHER CONDITION. ATTACHED TO weatherInfo Functions in If-else loop*/
+}
+
+
+.navBar ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    /*Sticky Navbar
+Add position: sticky; to <ul> to create a sticky navbar.
+
+A sticky element toggles between relative and fixed, depending on the scroll position.
+It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed).
+
+ul {
+  position: -webkit-sticky; // Safari
+    position: sticky;
+    top: 0;
+}
+
+You must also specify at least one of top, right, bottom or left for sticky positioning to work.
+
+    */
+    position: sticky;
+    top: 0;
+/*    positon : sticky ISN'T WORKING, DONT KNOW WHY ?*/
+}
+
+.navBar li{
+    float: left;
+/*    float MAKES THE BLOCK ELEMENTS FLOAT NEXT TO EACH OTHER WHILE REMAINING BLOCK ELEMENTS.*/
+/*    OTHERWISE HAVE TO USE INLINE ELEMENTS TO MAKE THEM NEXT TO EACH OTHER, BUT THAT MAKES THEM INLINE ELEMENTS.*/
+/*    ABOUT Navigation is locally turned to be float:right in html */
+}
+
+.navBar li a{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+.navBar li a:hover:not(.active){
+    background-color: #111;
+/*    a:hover GIVES US FUNCTIONALITY TO ADD ON HOVERING ON a TAGS. a:hover:not(.class) --> EXCEPT THE TAG WITH .class ELEMENT HOVER WILL WE ADDED.*/
+}
+
+.navBar .active{
+    background-color: #111;
+/*    .active CLASS HAS BEEN GIVEN TO ABOUT BLOCK ELEMENT. THUS PARTICULARLY TO THAT ELEMENT, WE ARE CHANGING THE BACKGROUND COLOUR.*/
+}
+
+.input-container{
+    margin-top: 30px;
+    margin-left: 55%;
+}
+
+/*Use display: block in css for each element you want on a new line.*/
+
+.input-container input[type=text]{
+    /*https://www.w3schools.com/css/css_form.asp*/
+    width : 75%;
+    /*% --> MAKES THE ELEMENT SIZE WRT TO THE PARENT ELEMENT>*/
+    border: none;
+    /*border: none ---> REMOVES ALL THE BORDERS */
+    border-bottom: 3px solid #1B065E;
+    /*border-bottom ---> ADDS BORDER ONLY AT THE BOTTOM*/
+    background-image: url('magnifying-glass-solid.svg'); /*https://www.w3schools.com/cssref/css3_pr_background-size.php*!*/
+    background-repeat: no-repeat;
+    /*!*background repeats stops image from repeating itself. otherwise less the size of image, it repeats itself that much to fill the space*!*/
+    background-size: 35px;
+    background-position: left center;
+    /*BACKGROUND IMAGE POSITION*/
+
+    background-color: transparent;
+    font-size: 20px;
+    font-weight: bold;
+    /*FONT WEIGHT CAN BE NORMAL, BOLD, OR THICKNESS VALUES SUCH AS 900*/
+    font-family: "Times New Roman", Times, serif;
+    text-align: center;
+    padding-top: 25px;
+    padding-bottom: 10px;
+    padding-left: 70px;
+    /*PADDING ADDS SOME SPACE INSIDE THE ELEMENT*/
+    margin-top : 70px;
+    margin-bottom: 18px;
+/*    Focused Inputs
+By default, some browsers will add a blue outline around the input when it gets focus (clicked on). You can remove this behavior by adding outline: none; to the input.
+Use the :focus selector to do something with the input field when it gets focus:*/
+    outline: none;
+}
+
+/*.input-container input[type=text] {*/
+/*    transition : width 0.4s ease-in-out;*/
+/*}*/
+
+/*.input-container input[type=text]:focus{*/
+/*    width: 75%*/
+/*}*/
+/*    Adding width initially at 75%, So not adding transition, wasn't looking good !*/
+
+.input-container input[type=submit]{
+    margin-left: 35%;
+    width : 25%;
+    border: none;
+    background-color: #4B4A67;
+    color: white;
+    padding: 14px 16px;
+    cursor: pointer;
+/*    CURSOR POINTER CHANGES THE CURSOR TO POINTER*/
+}
+
+.container-brief .weather-container{
+    padding-top: 35px;
+    padding-left: 70px;
+}
+
+.container-brief .weather-container .display ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    font-family: Calibri, Times, serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#display-icon{
+    width: 50px;
+    height: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+.container-detailed{
+    width: 100%;
+    height: 100vh;
+}
+
+.container-detailed .weather-container{
+    padding-left: 70px ;
+    padding-bottom: 25px;
+}
+
+.container-detailed .weather-container .detailed-display ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+}
+
+
+/*
+
+//WAS TRYING TO PULL A SEMI TRANSPARENT SCREEN ON HOVERING ON ABOUT WHICH SHOWED MY INFORMATION AND VERSION OF THE APP.
+
+
+!*Styling for the 'About' Element on Hovering
+.navBar ul .active:hover {
+    transform: translateX(-100%);
+    transition: transform 0.5s ease;
+
+}
+
+!* Hover overlay
+!* Semi-transparent overlay styling
+.hover-overlay {
+    display: none; !* Initially hidden
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); !* Semi-transparent
+    z-index: 1;
+}
+
+!* About hover effect
+.navBar ul .active:hover ~ .hover-overlay {
+    display: block; !* Show overlay on hover
+}
+
+*/
